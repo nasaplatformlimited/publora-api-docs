@@ -1,176 +1,395 @@
-# Publora API Documentation
+NOVATRADE GLOBAL — BINANCE LEVEL PREMIUM PLATFORM
 
-**Affordable REST API for scheduling and publishing social media posts across 10 platforms.**
+GLOBAL DESIGN LANGUAGE
 
-Schedule posts to X/Twitter, LinkedIn, Instagram, Threads, TikTok, YouTube, Facebook, Bluesky, Mastodon, and Telegram — all from a single API call. **Free tier available**, paid plans from **$2.99/month** per connected account.
+Theme Colors
 
-**Website:** [publora.com](https://publora.com) | **Dashboard:** [app.publora.com](https://app.publora.com) | **Email:** serge@publora.com
+Primary Background → #0B0F19
+Secondary Background → #111827
+Gold Accent → #F59E0B
+Success Green → #10B981
+Error Red → #EF4444
+Text White → #F9FAFB
+Muted Gray → #6B7280
 
-## Quick Start
+Typography
 
-```bash
-# 1. List your connected social accounts
-curl https://api.publora.com/api/v1/platform-connections \
-  -H "x-publora-key: YOUR_API_KEY"
+Font Family → Inter
 
-# 2. Schedule a post
-curl -X POST https://api.publora.com/api/v1/create-post \
-  -H "x-publora-key: YOUR_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "content": "Hello from Publora API!",
-    "platforms": ["twitter-123456789", "linkedin-ABC123"],
-    "scheduledTime": "2026-03-01T14:00:00.000Z"
-  }'
-```
+Large Heading → 42px
+Body Text → 16px
 
-**3 API calls. 10 platforms. Free tier + $2.99/account.**
+Card Border Radius → 18px
+Button Border Radius → 14px
 
-## Why Publora?
+---
 
-### Price Comparison
+1. PUBLIC LANDING PAGE
 
-| Feature | Publora | Ayrshare | Publer | Sprout Social |
-|---------|---------|----------|--------|---------------|
-| **Starting price** | **Free** | $49/mo | $12/mo | $249/mo |
-| Per-account pricing | $2.99-5.99 | N/A | N/A | N/A |
-| Platforms | **10** | 13 | 9 | 6 |
-| API access | All plans | Paid only | Paid only | Enterprise |
-| Bluesky support | Yes | Yes | No | No |
-| Threads support | Yes | Yes | Yes | No |
-| Mastodon support | Yes | No | Yes | No |
+TOP NAVIGATION
 
-**Publora offers a free tier and flexible per-account pricing — pay only for what you use.**
+Logo
+Markets
+Invest
+About
+Support
+Login
 
-### Why Developers Choose Publora
+---
 
-1. **Affordable** — Free tier available, paid plans from $2.99/account. No enterprise tier required.
-2. **10 Platforms** — X, LinkedIn, Instagram, Threads, TikTok, YouTube, Facebook, Bluesky, Mastodon, Telegram.
-3. **API-First** — Clean REST API designed for developers, not a bloated dashboard.
-4. **AI-Ready** — Docs indexed on [Context7](https://context7.com) so AI coding assistants already know our API.
-5. **Modern Platforms** — First-class support for Bluesky, Threads, and Mastodon that competitors lack.
+HERO SECTION
 
-## API Endpoints
+Headline:
 
-| Method | Endpoint | Description | Docs |
-|--------|----------|-------------|------|
-| `GET` | `/platform-connections` | List connected social accounts | [View](docs/endpoints/platform-connections.md) |
-| `POST` | `/test-connection/:platformId` | Test a platform connection | [View](docs/endpoints/test-connection.md) |
-| `POST` | `/create-post` | Create and schedule a post | [View](docs/endpoints/create-post.md) |
-| `GET` | `/list-posts` | List all posts with pagination | [View](docs/endpoints/list-posts.md) |
-| `GET` | `/get-post/:postGroupId` | Get post details and status | [View](docs/endpoints/get-post.md) |
-| `GET` | `/post-logs/:postGroupId` | Get publish attempt history | [View](docs/endpoints/post-logs.md) |
-| `PUT` | `/update-post/:postGroupId` | Update post timing or status | [View](docs/endpoints/update-post.md) |
-| `DELETE` | `/delete-post/:postGroupId` | Delete a scheduled post | [View](docs/endpoints/delete-post.md) |
-| `POST` | `/get-upload-url` | Get pre-signed URL for media upload | [View](docs/endpoints/upload-media.md) |
-| `GET/POST` | `/webhooks` | Manage webhook notifications | [View](docs/endpoints/webhooks.md) |
-| `POST` | `/linkedin-post-statistics` | Get LinkedIn post analytics | [View](docs/endpoints/linkedin-statistics.md) |
-| `POST` | `/linkedin-account-statistics` | Get LinkedIn account analytics | [View](docs/endpoints/linkedin-statistics.md) |
-| `POST` | `/linkedin-reactions` | Add reaction to a LinkedIn post | [View](docs/endpoints/linkedin-reactions.md) |
-| `DELETE` | `/linkedin-reactions` | Remove a LinkedIn reaction | [View](docs/endpoints/linkedin-reactions.md) |
-| `POST` | `/linkedin-followers` | Get LinkedIn follower statistics | [View](docs/endpoints/linkedin-followers.md) |
-| `POST` | `/linkedin-profile-summary` | Get LinkedIn profile summary | [View](docs/endpoints/linkedin-profile-summary.md) |
+Trade Smarter. Invest Globally.
 
-Base URL: `https://api.publora.com/api/v1`
+Buttons:
 
-## Supported Platforms
+Start Investing
+View Markets
 
-| Platform | Text | Images | Videos | Threading | Analytics |
-|----------|------|--------|--------|-----------|-----------|
-| X / Twitter | 280 chars | Up to 4 | 1 per post | Auto-split | — |
-| LinkedIn | 3,000 chars | Multiple | 1 per post | — | 5 metrics |
-| Instagram | 2,200 chars | Carousel (10) | Reels/Stories | — | — |
-| Threads | 500 chars | Carousel | 1 per post | Auto-split | — |
-| TikTok | Caption | — | 1 per post (MP4) | — | — |
-| YouTube | Description | — | 1 per post | — | — |
-| Facebook | 63,206 chars | Multiple | 1 per post | — | — |
-| Bluesky | 300 chars | Up to 4 | 1 per post | — | — |
-| Mastodon | 500 chars | Up to 4 | 1 per post | — | — |
-| Telegram | 4,096 chars | Multiple | 1 per post | — | — |
+Live BTC Price Ticker Scrolling Across Hero Section
 
-## Authentication
+---
 
-All requests require the `x-publora-key` header:
+FEATURE GRID
 
-```bash
-curl https://api.publora.com/api/v1/platform-connections \
-  -H "x-publora-key: sk_1234567890.abcdef1234567890"
-```
+AI Trading
+Wealth Management
+Institutional Security
+Global Portfolio Access
 
-Get your API key: [publora.com](https://publora.com) → **API** in sidebar → Generate.
+---
 
-See [Authentication Guide](docs/authentication.md) for details.
+SOCIAL PROOF SECTION
 
-## Pricing
+50,000 Investors
 
-| Plan | Price | Posts/Month | Accounts | Platforms | Video |
-|------|-------|-------------|----------|-----------|-------|
-| **Starter** | Free | 15 | 1 | LinkedIn & Bluesky | 50 MB |
-| **Pro** | $2.99/account | 100/account | Unlimited | All 10 | 100 MB |
-| **Premium** | $5.99/account | 500/account | Unlimited | All 10 | 250 MB |
+$200M Assets Managed
 
-All plans include full API access. Pro/Premium use per-account pricing — add as many accounts as you need. [Get started free](https://publora.com).
+---
 
-## Documentation
+FOOTER
 
-### Getting Started
-- [Quick Start Guide](docs/getting-started.md) — first post in 60 seconds
-- [Authentication](docs/authentication.md) — API keys and workspace auth
+Terms
+Privacy Policy
+Contact
 
-### Endpoint Reference
-- [Create Post](docs/endpoints/create-post.md) — schedule posts across platforms
-- [List Posts](docs/endpoints/list-posts.md) — fetch all posts with pagination and filters
-- [Get Post](docs/endpoints/get-post.md) — check post status and error details
-- [Post Logs](docs/endpoints/post-logs.md) — publish attempt history for debugging
-- [Update Post](docs/endpoints/update-post.md) — reschedule or change status
-- [Delete Post](docs/endpoints/delete-post.md) — remove posts across all platforms
-- [Platform Connections](docs/endpoints/platform-connections.md) — list connected accounts with health status
-- [Test Connection](docs/endpoints/test-connection.md) — validate a connection before posting
-- [Webhooks](docs/endpoints/webhooks.md) — real-time notifications for post events
-- [Upload Media](docs/endpoints/upload-media.md) — images and video uploads
-- [LinkedIn Statistics](docs/endpoints/linkedin-statistics.md) — post and account analytics
-- [LinkedIn Reactions](docs/endpoints/linkedin-reactions.md) — add/remove reactions
+---
 
-### Platform Guides
-- [X / Twitter](docs/platforms/x-twitter.md) · [LinkedIn](docs/platforms/linkedin.md) · [Instagram](docs/platforms/instagram.md) · [Threads](docs/platforms/threads.md) · [TikTok](docs/platforms/tiktok.md) · [YouTube](docs/platforms/youtube.md) · [Facebook](docs/platforms/facebook.md) · [Bluesky](docs/platforms/bluesky.md) · [Mastodon](docs/platforms/mastodon.md) · [Telegram](docs/platforms/telegram.md)
+2. INVESTOR DASHBOARD
 
-### Usage Guides
-- [Scheduling Posts](docs/guides/scheduling.md) — timing, drafts, batch scheduling
-- [Bulk Scheduling](docs/guides/bulk-scheduling.md) — CSV import, weekly content batches
-- [Threading Guide](docs/guides/threading.md) — post multi-part threads via API
-- [Twitter Threads](docs/guides/twitter-threads.md) — tweet thread automation
-- [Threads Multi-Post](docs/guides/threads-multi-post.md) — Meta Threads threading
-- [Rate Limits & Optimal Times](docs/guides/rate-limits.md) — platform limits, peak engagement, queue scheduling
-- [Media Uploads](docs/guides/media-uploads.md) — images, videos, carousels
-- [Cross-Platform Posting](docs/guides/cross-platform.md) — one call, many platforms
-- [LinkedIn Analytics](docs/guides/analytics.md) — post performance, account metrics
-- [Error Handling](docs/guides/error-handling.md) — status codes, retries
-- [Workspace / B2B API](docs/guides/workspace.md) — managed users, white-label
+LEFT SIDEBAR
 
-### AI Integration
-- [MCP Server](docs/guides/mcp-server.md) — Claude Code, Claude Desktop, Cursor integration
-- [Cursor AI Guide](docs/guides/cursor-ai.md) — AI-assisted development with Publora
+Dashboard
+Wallet
+Deposit
+Withdraw
+Investments
+Referrals
+Transactions
+Support
+Settings
+Logout
 
-### Code Examples
-- [JavaScript Examples](docs/examples/javascript/) — fetch, axios, Node.js
-- [Python Examples](docs/examples/python/) — requests, async workflows
-- [cURL Examples](docs/examples/curl/) — command-line reference
-- [Zapier Integration](docs/examples/no-code/zapier-integration.md) — no-code automation
-- [Make Integration](docs/examples/no-code/make-integration.md) — visual workflows
+---
 
-### API Specification
-- [OpenAPI 3.0 Spec](schema/openapi.yaml)
+TOP BAR
 
-## About
+Search Bar
 
-**[Publora](https://publora.com)** is an affordable social media API built by **[Creative Content Crafts, Inc.](https://cccrafts.ai)**
+Notifications Icon
 
-Looking for AI-powered content creation for LinkedIn, Threads, and X? Check out **[Co.Actor](https://co.actor)** — our AI service that helps B2B teams create authentic thought leadership content at scale.
+Profile Dropdown
 
-- **Publora** ([publora.com](https://publora.com)) — schedule and publish posts via API
-- **Co.Actor** ([co.actor](https://co.actor)) — AI content creation for LinkedIn, Threads, and X
-- **Creative Content Crafts** ([cccrafts.ai](https://cccrafts.ai)) — the company behind it all
+Portfolio Status Indicator
 
-## License
+---
 
-[MIT](LICENSE)
+MAIN CONTENT
+
+TOTAL BALANCE CARD
+
+Total Balance
+
+$42,400
+
++8.4% Profit Today
+
+---
+
+ACTIVE INVESTMENT CARD
+
+Gold Plan
+
+ROI 12%
+
+---
+
+CHART SECTION
+
+BTC/USD Live Trading Chart
+
+---
+
+RECENT TRANSACTIONS TABLE
+
+Deposit History
+
+Withdrawal History
+
+Profit History
+
+---
+
+3. TRADING TERMINAL
+
+LEFT PANEL
+
+Market Watchlist
+
+BTC/USDT
+
+ETH/USDT
+
+EUR/USD
+
+XAU/USD
+
+---
+
+CENTER PANEL
+
+Large Candlestick Trading Chart
+
+Powered by TradingView API
+
+---
+
+RIGHT PANEL
+
+Buy Order Form
+
+Sell Order Form
+
+---
+
+BOTTOM PANEL
+
+Open Orders
+
+Trade History
+
+---
+
+4. DEPOSIT PAGE
+
+SELECT PAYMENT METHOD
+
+Bank Transfer
+
+Card Payment
+
+Crypto Wallet
+
+---
+
+Deposit Amount Input
+
+Example:
+
+$500
+
+---
+
+Upload Payment Receipt
+
+---
+
+Submit Deposit Request Button
+
+---
+
+5. WITHDRAWAL PAGE
+
+Withdraw Funds
+
+Payment Method
+
+Bank
+
+Crypto
+
+---
+
+Withdrawal Amount
+
+Example:
+
+$2500
+
+---
+
+Wallet Address / Bank Details Input
+
+---
+
+Confirm Withdrawal Button
+
+---
+
+Estimated Processing Time
+
+5 Minutes
+
+---
+
+6. ADMIN DASHBOARD
+
+ADMIN SIDEBAR
+
+Overview
+
+Users
+
+Deposits
+
+Withdrawals
+
+Transactions
+
+Investment Plans
+
+Support Tickets
+
+Announcements
+
+Analytics
+
+Security Logs
+
+---
+
+TOP METRICS
+
+Users → 24,203
+
+Deposits → $2.4M
+
+Withdrawals Pending → 182
+
+Revenue → $890,000
+
+---
+
+TABLES
+
+Pending Deposits
+
+Pending Withdrawals
+
+Fraud Alerts
+
+Recent Registrations
+
+---
+
+7. PREMIUM COMPONENT SYSTEM
+
+CARDS
+
+Glassmorphism Effect
+
+Blur → 20px
+
+Border → rgba(255,255,255,0.05)
+
+---
+
+BUTTONS
+
+Gold Gradient Background
+
+Hover Lift Animation
+
+Shadow Glow Effect
+
+---
+
+CHARTS
+
+Candlestick Trading Charts
+
+Portfolio Growth Graph
+
+Profit Distribution Pie Chart
+
+---
+
+FOLDER STRUCTURE
+
+app/
+
+page.tsx
+
+login/
+
+register/
+
+dashboard/
+
+wallet/
+
+deposit/
+
+withdraw/
+
+investment/
+
+referrals/
+
+admin/
+
+users/
+
+deposits/
+
+withdrawals/
+
+analytics/
+
+---
+
+TECH STACK
+
+Frontend → Next.js 15
+
+Backend → Supabase
+
+Database → PostgreSQL
+
+Authentication → JWT Secure Sessions
+
+Charts → TradingView API
+
+Payments → Stripe + Flutterwave + Paystack
+
+Deployment → Vercel
+
+Animations → Framer Motion
+
+Security → Cloudflare
+
+---
+
+DESIGN STANDARD
+
+Premium Institutional Grade UI
+
+Inspired By:
+
+Binance
+
+Bloomberg Terminal
+
+BlackRock Institutional Dashboard
